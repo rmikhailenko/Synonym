@@ -1,20 +1,20 @@
-// var m = [2,7,1,11,157,13,22,144, -3];
-//
-// function sort(m) {
-//   var tmp;
-//   var n = m.length;
-//     for (var i = 0; i < n-1; i++) {
-//       for (var j = 0; j < n-i-1; j++) {
-//         if (m[j]>m[j+1]) {
-//           tmp = m[j];
-//           m[j]=m[j+1];
-//           m[j+1]= tmp;
-//         }
-//     }
-//   }
-//   console.log(m);
-// }
-// sort(m);
+var m = [2,7,1,11,157,13,22,144, -3];
+
+function sort(m) {
+  var tmp;
+  var n = m.length;
+    for (var i = 0; i < n-1; i++) {
+      for (var j = 0; j < n-i-1; j++) {
+        if (m[j]>m[j+1]) {
+          tmp = m[j];
+          m[j]=m[j+1];
+          m[j+1]= tmp;
+        }
+    }
+  }
+  //console.log(m);
+}
+//sort(m);
 
 // Get sum of elements on even places in array
 
@@ -49,48 +49,48 @@
 // }
 // console.log(sumOfEven(m));
 
-// var m = [2,7,4,5,9];
-//
-// function out(m) {
-//   var n = m.length;
-//   for(var i = 0; i < n/2; i++) {
-//     var x = n - i - 1;
-//     console.log("i:"+m[i] +"x:"+ m[x] );
-//
-//   }
-// }
-// console.log(out(m));
+var m = [2,7,4,5,9];
 
-// var m = [15,3,-7,4,13]; // [13,4,-7,3,15]
-//   //
-// function out(m) {
-//   var n = m.length;
-//   var tmp;
-//   for(var i = 0; i < n/2; i++) {
-//     var x = n - i - 1;
-//     tmp = m[i];
-//     m[i]=m[x];
-//     m[x]=tmp;
-//
-//   }
-//     return m;
-// }
-//
-// console.log(out(m));
+function out(m) {
+  var n = m.length;
+  for(var i = 0; i < n/2; i++) {
+    var x = n - i - 1;
+   console.log("i:"+m[i] +"x:"+ m[x] );
+
+  }
+}
+console.log(out(m));
+
+var m = [15,3,-7,4,13]; // [13,4,-7,3,15]
+  //Reverser massive
+function out(m) {
+  var n = m.length;
+  var tmp;
+  for(var i = 0; i < n/2; i++) {
+    var x = n - i - 1;
+    tmp = m[i];
+    m[i]=m[x];
+    m[x]=tmp;
+
+  }
+  //  return m;
+}
+
+//console.log(out(m));
 
 //
-// var m = [1,2,14,-7,4,5,-9]
-// function max(m) {
-//    var n = m.length;
-//   var max = m[0];
-//   for (var i = 1; i < n; i++) {
-//     if (max < m[i]) {
-//         max = m[i];
-//     }
-//
-//   }
-//   return(max);
-// }
+var m = [1,2,14,-7,4,5,-9]
+function max(m) {
+   var n = m.length;
+  var max = 0;
+  for (var i = 1; i < n; i++) {
+    if (m[max] < m[i]) {
+        max = i;
+    }
+
+  }
+//  return m[max];
+}
 //
 // //-------------------------------------------------
 //
@@ -181,30 +181,34 @@
 // 1) Write function that will change places of max and min element
 // *     a) use built in functions max and min of array
 // *     b) without use of built in functions. allowed to use only one cycle for
-// *     ExchangeMinMax([1, 20, 3, 6, 19, -7, 3]) should return [1, -7, 3, 6, 19, 20, 3]
+// *     ExchangeMinMax([1, 20, 3, 6, 19, -7, 3]) should return [1, -7, 3, 6, 19, 20, 3]    [1, 20, 3, 6, 19, -7, 3]
 
-// var arr = [1, 20, 3, 6, 19, -7, 3];
-//
-// function ExchangeMinMax(arr) {
-//   var tmp;
-//   var n = arr.length;
-//   var max = arr[0];
-//   var min = arr[0];
-//   for (var i = 1; i < n; i++) {
-//     if (max < arr[i]) {
-//         max = arr[i];
-//       }
-//       console.log(max);
-//
-//     if (min > arr[i]) {
-//       min = arr[i]
-//     }
-//       console.log(min);
-// }
-// }
-//
-// console.log(ExchangeMinMax(arr));
-//
+var arr = [1, 20, 3, 6, 19, -7, 3];
+
+function ExchangeMinMax(arr) {
+  var tmp;
+  var n = arr.length;
+  var max = arr[0];
+  var min = arr[0];
+  for (var i = 1; i < n; i++) {
+    if (arr[max] < arr[i]) {
+      max = i;
+    }
+    if (arr[min] > arr[i]) {
+      min = i;
+    }
+  }
+  //console.log(min);
+  //console.log(max);
+  tmp = arr[min];
+  arr[min] = arr[max];
+  arr[max] = tmp;
+
+
+//  return arr;
+}
+//console.log(ExchangeMinMax(arr));
+
 
 
 
@@ -218,17 +222,15 @@
 var arr = [17, 8, 9, 11, 3, 5];
 var value = 11;
 function IndexOf(value, arr) {
-var n = arr.length;
-   for (var i = 0; i < n; i++) {
+  var n = arr.length;
+  for(var i = 0; i < n; i++) {
     if (value == arr[i]) {
-      return 1;
-    } else {
-      return -1
+//      return i;
     }
   }
-
-  }
-console.log (IndexOf(11, [17, 8, 9, 11, 3, 5]));
+//  return -1;
+}
+//console.log (IndexOf(11, [17, 8, 9, 11, 3, 5]));
 
 
 
@@ -236,7 +238,17 @@ console.log (IndexOf(11, [17, 8, 9, 11, 3, 5]));
 //     IsPalindrom([1, 2, 3, 2, 1]) should return true
 //     IsPalindrom([1, 2, 3, 2, 7]) should return false
 
+var arr = [1, 2, 3, 2, 1];
 
+function IsPalindrom(arr) {
+  var n = arr.length;
+  for (var i = 0; i < n/2; i++) {
+    var x = n - i - 1;
+    if () {
+
+    }
+  }
+}
 
 
 
