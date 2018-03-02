@@ -76,7 +76,7 @@ function out(m) {
     return m;
 }
 
-console.log(out(m));
+//console.log(out(m));
 
 
 var m = [1, 2, 14, -7, 4, 5, -9]
@@ -243,17 +243,18 @@ var arr = [1, 2, 3, 2, 1];
 
 function IsPalindrom(arr) {
   var n = arr.length;
+  var result;
   for (var i = 0; i < n/2; i++) {
     var x = n-i-1;
-    if (m[i] == m[x]) {
-      console.log(true);
+    if (arr[i] == arr[x]) {
+      return true;
     } else {
-      console.log(false);
+      return false;
     }
   }
 }
 
-//IsPalindrom();
+IsPalindrom(arr);
 
 
 
