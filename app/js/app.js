@@ -1,15 +1,15 @@
-var m = [2,7,1,11,157,13,22,144, -3];
+var m = [2, 7, 1, 11, 157, 13, 22, 144, -3];
 
 function sort(m) {
   var tmp;
   var n = m.length;
-    for (var i = 0; i < n-1; i++) {
-      for (var j = 0; j < n-i-1; j++) {
-        if (m[j]>m[j+1]) {
-          tmp = m[j];
-          m[j]=m[j+1];
-          m[j+1]= tmp;
-        }
+  for (var i = 0; i < n - 1; i++) {
+    for (var j = 0; j < n - i - 1; j++) {
+      if (m[j] > m[j + 1]) {
+        tmp = m[j];
+        m[j] = m[j + 1];
+        m[j + 1] = tmp;
+      }
     }
   }
   //console.log(m);
@@ -18,111 +18,112 @@ function sort(m) {
 
 // Get sum of elements on even places in array
 
-// var m = [0,1,2,3,4,5,6,7,8,9];
-//
-// function sumOfEven(m) {
-//   var n = m.length;
-//   var sum = 0;
-//   for(var i = 0; i < n; i++) {
-//     if (i%2==1) {
-//         sum =sum + m[i];
-//     }
-//
-//   }
-//   return sum;
-// }
-//
-// console.log(sumOfEven(m));
-//
+var m = [0,1,2,3,4,5,6,7,8,9];
 
-// var m = [2,7,4,5];
-//
-// function sumOfEven(m) {
-//   var n = m.length;
-//   var sum = 0;
-//   for(var i = 0; i < n; i++) {
-//     if (m[i]%2==1) {
-//         sum =sum + m[i];
-//     }
-//   }
-//   return sum;
-// }
-// console.log(sumOfEven(m));
-
-var m = [2,7,4,5,9];
-
-function out(m) {
+function sumOfEven(m) {
   var n = m.length;
-  for(var i = 0; i < n/2; i++) {
-    var x = n - i - 1;
-   console.log("i:"+m[i] +"x:"+ m[x] );
-
-  }
-}
-console.log(out(m));
-
-var m = [15,3,-7,4,13]; // [13,4,-7,3,15]
-  //Reverser massive
-function out(m) {
-  var n = m.length;
-  var tmp;
-  for(var i = 0; i < n/2; i++) {
-    var x = n - i - 1;
-    tmp = m[i];
-    m[i]=m[x];
-    m[x]=tmp;
-
-  }
-  //  return m;
-}
-
-//console.log(out(m));
-
-//
-var m = [1,2,14,-7,4,5,-9]
-function max(m) {
-   var n = m.length;
-  var max = 0;
-  for (var i = 1; i < n; i++) {
-    if (m[max] < m[i]) {
-        max = i;
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    if (i%2==1) {
+        sum =sum + m[i];
     }
 
   }
-//  return m[max];
+  return sum;
+}
+
+//console.log(sumOfEven(m));
+
+
+var m = [2,7,4,5];
+
+function sumOfEven(m) {
+  var n = m.length;
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    if (m[i]%2==1) {
+        sum =sum + m[i];
+    }
+  }
+  return sum;
+}
+//console.log(sumOfEven(m));
+
+var m = [2, 7, 4, 5, 9];
+
+function out(m) {
+  var n = m.length;
+  for (var i = 0; i < n / 2; i++) {
+    var x = n - i - 1;
+    console.log("i:" + m[i] + "x:" + m[x]);
+
+  }
+}
+//console.log(out(m));
+
+var m = [15, 3, -7, 4, 13]; // [13,4,-7,3,15]
+//Reverser massive
+function out(m) {
+  var n = m.length;
+  var tmp;
+  for (var i = 0; i < n / 2; i++) {
+    var x = n - i - 1;
+    tmp = m[i];
+    m[i] = m[x];
+    m[x] = tmp;
+
+  }
+    return m;
+}
+
+console.log(out(m));
+
+
+var m = [1, 2, 14, -7, 4, 5, -9]
+
+function max(m) {
+  var n = m.length;
+  var max = 0;
+  for (var i = 1; i < n; i++) {
+    if (m[max] < m[i]) {
+      max = i;
+    }
+
+  }
+  //  return m[max];
 }
 //
 // //-------------------------------------------------
-//
-// function findMax(m) {
-//   console.log(m);
-//   var left=[], right=[];
-//   var n = m.length;
-//   var rightBorder = parseInt(n/2);
-//   var rightStart;
-//
-//   if (n%2==0) {
-//     rightStart = rightBorder;
-//   } else {
-//     rightStart = rightBorder+1;
-//   }
-//
-//   for (var i = 0; i < rightBorder; i++) {
-//     var l = m[i]
-//     left.push(l);
-//   }
-//   for (var i = rightStart; i < n; i++) {
-//     var r = m[i];
-//     right.push(r);
-//   }
-//   console.log("left "+ left);
-//   console.log("right "+ right);
-//   console.log(max(left));
-//   console.log(max(right));
-// }
-//
-// findMax([1,2,14,-7,4,5,-9]);
-// findMax([1,2,14,-7,4,5]);
+
+function findMax(m) {
+  console.log(m);
+  var left=[], right=[];
+  var n = m.length;
+  var rightBorder = parseInt(n/2);
+  var rightStart;
+
+  if (n%2==0) {
+    rightStart = rightBorder;
+  } else {
+    rightStart = rightBorder+1;
+  }
+
+  for (var i = 0; i < rightBorder; i++) {
+    var l = m[i]
+    left.push(l);
+  }
+  for (var i = rightStart; i < n; i++) {
+    var r = m[i];
+    right.push(r);
+  }
+//  console.log("left "+ left);
+//  console.log("right "+ right);
+//  console.log(max(left));
+//  console.log(max(right));
+}
+
+//findMax([1,2,14,-7,4,5,-9]);
+//findMax([1,2,14,-7,4,5]);
 
 
 //
@@ -205,7 +206,7 @@ function ExchangeMinMax(arr) {
   arr[max] = tmp;
 
 
-//  return arr;
+  //  return arr;
 }
 //console.log(ExchangeMinMax(arr));
 
@@ -221,14 +222,15 @@ function ExchangeMinMax(arr) {
 
 var arr = [17, 8, 9, 11, 3, 5];
 var value = 11;
+
 function IndexOf(value, arr) {
   var n = arr.length;
-  for(var i = 0; i < n; i++) {
+  for (var i = 0; i < n; i++) {
     if (value == arr[i]) {
-//      return i;
+      //      return i;
     }
   }
-//  return -1;
+  //  return -1;
 }
 //console.log (IndexOf(11, [17, 8, 9, 11, 3, 5]));
 
@@ -237,30 +239,21 @@ function IndexOf(value, arr) {
 //  3) Write function which will check does array is a palindrom
 //     IsPalindrom([1, 2, 3, 2, 1]) should return true
 //     IsPalindrom([1, 2, 3, 2, 7]) should return false
-
 var arr = [1, 2, 3, 2, 1];
 
 function IsPalindrom(arr) {
   var n = arr.length;
   for (var i = 0; i < n/2; i++) {
-    var x = n - i - 1;
-    if () {
-
+    var x = n-i-1;
+    if (m[i] == m[x]) {
+      console.log(true);
+    } else {
+      console.log(false);
     }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
+//IsPalindrom();
 
 
 
