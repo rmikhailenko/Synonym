@@ -239,7 +239,7 @@ function IndexOf(value, arr) {
 //  3) Write function which will check does array is a palindrom
 //     IsPalindrom([1, 2, 3, 2, 1]) should return true
 //     IsPalindrom([1, 2, 3, 2, 7]) should return false
-var arr = [1, 2, 3, 2, 1];
+var arr = [1, 2, 3, 2, 3];
 
 function IsPalindrom(arr) {
   var n = arr.length;
@@ -254,7 +254,7 @@ function IsPalindrom(arr) {
   }
 }
 
-IsPalindrom(arr);
+console.log(IsPalindrom(arr));
 
 
 
