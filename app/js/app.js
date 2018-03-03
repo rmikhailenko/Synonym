@@ -247,15 +247,23 @@ function IsPalindrom(arr) {
   for (var i = 0; i < n / 2; i++) {
     var x = n - i - 1;
     if (arr[i] != arr[x]) {
-      result = false; {
+      result = false;
         break;
-      }
     }
   }
   return result;
 }
+//console.log(IsPalindrom(arr));
 
-console.log(IsPalindrom(arr));
+
+//4) Write function which will sort left part of array in descending order and right in ascending order.
+//     Suppose that array always has even(like 10) length. It is allowed to use sort function from previous tasks
+//     SortArrayParts([3, 1, 7, 6 , 5, 4]) should return [7, 1, 3, 4, 5, 6]
+
+
+
+
+
 
 
 
