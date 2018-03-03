@@ -206,7 +206,7 @@ function ExchangeMinMax(arr) {
   arr[max] = tmp;
 
 
-  //  return arr;
+  //return arr;
 }
 //console.log(ExchangeMinMax(arr));
 
@@ -251,17 +251,27 @@ function IsPalindrom(arr) {
         break;
     }
   }
-  return result;
+//  return result;
 }
 //console.log(IsPalindrom(arr));
-
 
 //4) Write function which will sort left part of array in descending order and right in ascending order.
 //     Suppose that array always has even(like 10) length. It is allowed to use sort function from previous tasks
 //     SortArrayParts([3, 1, 7, 6 , 5, 4]) should return [7, 1, 3, 4, 5, 6]
 
+var arr = [3, 1, 7, 6 , 5, 4];
 
+function SortArrayParts(arr) {
+  var n = arr.length
 
+  for (var i = 0; i < n/2; i++) {
+    var x = n - i - 1;
+    if () {
+
+    }
+  }
+
+}
 
 
 
