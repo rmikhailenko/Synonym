@@ -243,22 +243,19 @@ var arr = [1, 2, 3, 2, 1];
 
 function IsPalindrom(arr) {
   var n = arr.length;
-  var result;
-  for (var i = 0; i < n/2; i++) {
-    var x = n-i-1;
-    if (arr[i] == arr[x]) {
-      return true;
-    } else {
-      return false;
+  var result = true;
+  for (var i = 0; i < n / 2; i++) {
+    var x = n - i - 1;
+    if (arr[i] != arr[x]) {
+      result = false; {
+        break;
+      }
     }
   }
+  return result;
 }
 
 console.log(IsPalindrom(arr));
-
-
-
-
 
 
 
