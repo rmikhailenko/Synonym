@@ -205,6 +205,8 @@ function ExchangeMinMax(arr) {
   arr[min] = arr[max];
   arr[max] = tmp;
 
+  arr
+
 
   //return arr;
 }
@@ -263,17 +265,17 @@ var arr = [3, 1, 7, 6 , 5, 4];
 
 function SortArrayParts(arr) {
   var n = arr.length
+  var half = n/2;
   var tmp;
-  for (var i = 0; i < n/2; i++) {
+  for (var i = 0; i < half; i++) {
     var x = n - i - 1;
-    if () {
+    
 
-    }
   }
-
+  return arr;
 }
 
-
+console.log(SortArrayParts(arr));
 
 
 
