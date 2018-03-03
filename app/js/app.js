@@ -263,7 +263,7 @@ var arr = [3, 1, 7, 6 , 5, 4];
 
 function SortArrayParts(arr) {
   var n = arr.length
-
+  var tmp;
   for (var i = 0; i < n/2; i++) {
     var x = n - i - 1;
     if () {
