@@ -261,22 +261,21 @@ function IsPalindrom(arr) {
 //     Suppose that array always has even(like 10) length. It is allowed to use sort function from previous tasks
 //     SortArrayParts([3, 1, 7, 6 , 5, 4]) should return [7, 1, 3, 4, 5, 6]
 
-var arr = [3, 1, 7, 6 , 5, 4];
+var arr = [3, 1, 7, 6, 5, 4];
 
 function SortArrayParts(arr) {
   var n = arr.length
-  var half = n/2;
+  var half = n / 2;
   var tmp;
   for (var i = 0; i < half; i++) {
     var x = n - i - 1;
-    
+    console.log(arr);
 
   }
-  return arr;
+  //  return arr;
 }
 
-console.log(SortArrayParts(arr));
-
+SortArrayParts(arr);
 
 
 
