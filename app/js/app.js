@@ -269,7 +269,7 @@ function SortArrayParts(arr) {
   var tmp;
   for (var i = 0; i < half; i++) {
     var x = n - i - 1;
-    console.log(arr);
+    
 
   }
   //  return arr;
