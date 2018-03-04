@@ -312,21 +312,68 @@ function FibonacciSequence(value) {
     second = result;
     fibonacciArr.push(result);
   }
-  return fibonacciArr;
+  //return fibonacciArr;
 }
 
-console.log(FibonacciSequence(10));
+//console.log(FibonacciSequence(10));
 
 //------------------------------------------------------------------------------
 //  6) Write function which receive 2 arrays and returns array consisted of elements from both arrays
 //     ordered in descending order. It is not allowed to use built in concat function
 //     ConcatAndSort([3, 7, -9], [10, -57]) should return [10, 7, 3, -9, -57]
 
+var arr1 = [3, 7, -9];
+var arr2 = [10, -57];
 
+function ConcatAndSort(arr1, arr2) {
+  var arr = arr2.concat(arr1);
+  arr.sort(function(a, b) {
+    return b - a;
+  });
 
+  //return arr;
+}
 
+//console.log(ConcatAndSort(arr1, arr2));
 
+//------------------------------------------------------------------------------
 
+//  7) Write function which will check equality of arrays
+//     IsArraysEqual([1, 2, 3], [1, 2, 3]) should return true
+//     IsArraysEqual([1, 2, 3], [3, 2, 1]) should return false
+//     IsArraysEqual([1, 2], [1, 2, 3, 4]) should return false
+
+var arr1 = [1, 2, 3];
+var arr2 = [1, 2, 3];
+
+function IsArraysEqual(arr1, arr2 ) {
+  var result = true;
+  var n = arr1.length;
+  var m = arr2.length;
+  if (m != n) {
+    return false;
+  }
+
+  for (var i = 0; i < n; i++)  {
+      if (arr1[i] != arr2[i]) {
+        result = false;
+        break;
+    }
+
+  }
+  return result;
+
+}
+console.log(IsArraysEqual(arr1, arr2));
+
+//------------------------------------------------------------------------------
+
+//  8)** Write function which will check does array A includes all elements from array B
+//     IsArrayIncludesAllElements([1, 3, 6, 4, 7], [1, 6, 7]) should return true
+//     IsArrayIncludesAllElements([1, 3, 6, 4, 7], [1, 6, 8]) should return false
+//     IsArrayIncludesAllElements([1, 3, 6, 4, 7], [9, 15]) should return false
+//
+//     Please do not use built in IndexOf function
 
 
 
