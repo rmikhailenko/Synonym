@@ -12,20 +12,20 @@ function sort(m) {
       }
     }
   }
-  //console.log(m);
+  //  console.log(m);
 }
 //sort(m);
 
 // Get sum of elements on even places in array
 
-var m = [0,1,2,3,4,5,6,7,8,9];
+var m = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function sumOfEven(m) {
   var n = m.length;
   var sum = 0;
-  for(var i = 0; i < n; i++) {
-    if (i%2==1) {
-        sum =sum + m[i];
+  for (var i = 0; i < n; i++) {
+    if (i % 2 == 1) {
+      sum = sum + m[i];
     }
 
   }
@@ -35,14 +35,14 @@ function sumOfEven(m) {
 //console.log(sumOfEven(m));
 
 
-var m = [2,7,4,5];
+var m = [2, 7, 4, 5];
 
 function sumOfEven(m) {
   var n = m.length;
   var sum = 0;
-  for(var i = 0; i < n; i++) {
-    if (m[i]%2==1) {
-        sum =sum + m[i];
+  for (var i = 0; i < n; i++) {
+    if (m[i] % 2 == 1) {
+      sum = sum + m[i];
     }
   }
   return sum;
@@ -73,13 +73,13 @@ function out(m) {
     m[x] = tmp;
 
   }
-    return m;
+  return m;
 }
 
 //console.log(out(m));
 
 
-var m = [1, 2, 14, -7, 4, 5, -9]
+var m = [1, 2, 14, -7, 4, 5, -9];
 
 function max(m) {
   var n = m.length;
@@ -97,29 +97,30 @@ function max(m) {
 
 function findMax(m) {
   console.log(m);
-  var left=[], right=[];
+  var left = [],
+    right = [];
   var n = m.length;
-  var rightBorder = parseInt(n/2);
+  var rightBorder = parseInt(n / 2);
   var rightStart;
 
-  if (n%2==0) {
+  if (n % 2 == 0) {
     rightStart = rightBorder;
   } else {
-    rightStart = rightBorder+1;
+    rightStart = rightBorder + 1;
   }
 
   for (var i = 0; i < rightBorder; i++) {
-    var l = m[i]
+    var l = m[i];
     left.push(l);
   }
-  for (var i = rightStart; i < n; i++) {
+  for (i = rightStart; i < n; i++) {
     var r = m[i];
     right.push(r);
   }
-//  console.log("left "+ left);
-//  console.log("right "+ right);
-//  console.log(max(left));
-//  console.log(max(right));
+  // console.log("left "+ left);
+  // console.log("right "+ right);
+  // console.log(max(left));
+  // console.log(max(right));
 }
 
 //findMax([1,2,14,-7,4,5,-9]);
@@ -205,7 +206,7 @@ function ExchangeMinMax(arr) {
   arr[min] = arr[max];
   arr[max] = tmp;
 
-  arr
+
 
 
   //return arr;
@@ -250,32 +251,50 @@ function IsPalindrom(arr) {
     var x = n - i - 1;
     if (arr[i] != arr[x]) {
       result = false;
-        break;
+      break;
     }
   }
-//  return result;
+  //  return result;
 }
 //console.log(IsPalindrom(arr));
 
 //4) Write function which will sort left part of array in descending order and right in ascending order.
 //     Suppose that array always has even(like 10) length. It is allowed to use sort function from previous tasks
-//     SortArrayParts([3, 1, 7, 6 , 5, 4]) should return [7, 1, 3, 4, 5, 6]
+//     SortArrayParts([3, 1, 7, 6 , 5, 4]) should return [7, 3, 1, 4, 5, 6]
 
-var arr = [3, 1, 7, 6, 5, 4];
+var arr = [3, 1, 7, 6, 5, 4, 10, 2, 7, 8, 20, 17];
 
 function SortArrayParts(arr) {
-  var n = arr.length
-  var half = n / 2;
+  var n = arr.length;
+  var half = parseInt(n / 2);
+  var x = n - i - 1;
+  var arr1 = [], arr2 = [];
   var tmp;
-  for (var i = 0; i < half; i++) {
-    var x = n - i - 1;
-    
-
+  for (var i = 0; i <= half - 1; i++) {
+    var left = arr[i];
+    arr1.push(left);
   }
-  //  return arr;
+  for (i = half; i < n; i++) {
+    var right = arr[i];
+    arr2.push(right);
+  }
+  //sort ascending
+  arr1.sort(function(a, b) {
+    return a - b;
+  });
+    //sort descending
+    arr2.sort(function(a, b) {
+      return b - a;
+    });
+    for (i = 0; i < arr2.length; i++) {
+      var pushArr = arr2[i];
+      arr1.push(pushArr);
+    }
+    return arr1;
 }
+console.log(SortArrayParts(arr));
 
-SortArrayParts(arr);
+
 
 
 
