@@ -268,7 +268,8 @@ function SortArrayParts(arr) {
   var n = arr.length;
   var half = parseInt(n / 2);
   var x = n - i - 1;
-  var arr1 = [], arr2 = [];
+  var arr1 = [],
+    arr2 = [];
   var tmp;
   for (var i = 0; i <= half - 1; i++) {
     var left = arr[i];
@@ -282,18 +283,32 @@ function SortArrayParts(arr) {
   arr1.sort(function(a, b) {
     return a - b;
   });
-    //sort descending
-    arr2.sort(function(a, b) {
-      return b - a;
-    });
-    for (i = 0; i < arr2.length; i++) {
-      var pushArr = arr2[i];
-      arr1.push(pushArr);
-    }
-    return arr1;
+  //sort descending
+  arr2.sort(function(a, b) {
+    return b - a;
+  });
+  // for (i = 0; i < arr2.length; i++) {
+  //   var pushArr = arr2[i];
+  //   arr1.push(pushArr);
+  var result = arr1.concat(arr2);
+
+  return result;
 }
+
 console.log(SortArrayParts(arr));
 
+//------------------------------------------------------------------------------
+//  5) Write function that will populate array with first 10 members of fibonacci sequence
+//     FibonacciSequence() should return [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+//     Use cycle for.
+
+function FibonacciSequence(value) {
+
+
+
+}
+
+FibonacciSequence(10);
 
 
 
