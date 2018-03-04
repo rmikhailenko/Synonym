@@ -292,10 +292,10 @@ function SortArrayParts(arr) {
   //   arr1.push(pushArr);
   var result = arr1.concat(arr2);
 
-  return result;
+  //return result;
 }
 
-console.log(SortArrayParts(arr));
+//console.log(SortArrayParts(arr));
 
 //------------------------------------------------------------------------------
 //  5) Write function that will populate array with first 10 members of fibonacci sequence
@@ -303,12 +303,29 @@ console.log(SortArrayParts(arr));
 //     Use cycle for.
 
 function FibonacciSequence(value) {
-
-
-
+  var fibonacciArr = [1,1];
+  var first = 1,
+    second = 1;
+  for (var i = 3; i <= value; i++) {
+    var result = first + second;
+    first = second;
+    second = result;
+    fibonacciArr.push(result);
+  }
+  return fibonacciArr;
 }
 
-FibonacciSequence(10);
+console.log(FibonacciSequence(10));
+
+//------------------------------------------------------------------------------
+//  6) Write function which receive 2 arrays and returns array consisted of elements from both arrays
+//     ordered in descending order. It is not allowed to use built in concat function
+//     ConcatAndSort([3, 7, -9], [10, -57]) should return [10, 7, 3, -9, -57]
+
+
+
+
+
 
 
 
