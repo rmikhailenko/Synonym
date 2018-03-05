@@ -359,12 +359,11 @@ function IsArraysEqual(arr1, arr2 ) {
         result = false;
         break;
     }
-
   }
-  return result;
+//  return result;
 
 }
-console.log(IsArraysEqual(arr1, arr2));
+//console.log(IsArraysEqual(arr1, arr2));
 
 //------------------------------------------------------------------------------
 
@@ -374,6 +373,28 @@ console.log(IsArraysEqual(arr1, arr2));
 //     IsArrayIncludesAllElements([1, 3, 6, 4, 7], [9, 15]) should return false
 //
 //     Please do not use built in IndexOf function
+
+var arr1 = [1, 3, 6, 4, 7];
+var arr2 = [1, 3, 6];
+
+function IsArrayIncludesAllElements(arr1, arr2) {
+  var m = arr1.length;
+  var n = arr2.length;
+  var result = true;
+  for (var i = 0; i < m; i++) {
+  if (arr1[i] != arr2[i]) {
+    result = false;
+  }
+}
+  return result;
+}
+
+console.log(IsArrayIncludesAllElements(arr1, arr2));
+
+
+
+
+
 
 
 
