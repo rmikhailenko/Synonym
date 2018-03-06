@@ -402,8 +402,9 @@ for (var i = 0; i < n; i++) {
 var arr1 = [1, 3, 6, 4, 7];
 var arr2 = [3, 6, 4];
 
-
-
+function IsArrayIncludes(arr1, arr2) {
+  
+}
 
 
 
