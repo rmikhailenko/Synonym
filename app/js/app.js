@@ -223,19 +223,19 @@ function ExchangeMinMax(arr) {
 //     IndexOf(15, [17, 8, 9, 11, 3, 5]) should return -1
 //
 
-var arr = [17, 8, 9, 11, 3, 5];
-var value = 11;
+var arr = [11, 8, 9, 11, 3, 5];
+var value = 17;
 
 function IndexOf(value, arr) {
   var n = arr.length;
   for (var i = 0; i < n; i++) {
     if (value == arr[i]) {
-      //      return i;
+      return i;
     }
   }
-  //  return -1;
+  return -1;
 }
-//console.log (IndexOf(11, [17, 8, 9, 11, 3, 5]));
+//console.log(IndexOf(11, [17, 8, 9, 11, 3, 5]));
 
 
 
@@ -303,7 +303,7 @@ function SortArrayParts(arr) {
 //     Use cycle for.
 
 function FibonacciSequence(value) {
-  var fibonacciArr = [1,1];
+  var fibonacciArr = [1, 1];
   var first = 1,
     second = 1;
   for (var i = 3; i <= value; i++) {
@@ -346,7 +346,7 @@ function ConcatAndSort(arr1, arr2) {
 var arr1 = [1, 2, 3];
 var arr2 = [1, 2, 3];
 
-function IsArraysEqual(arr1, arr2 ) {
+function IsArraysEqual(arr1, arr2) {
   var result = true;
   var n = arr1.length;
   var m = arr2.length;
@@ -354,13 +354,13 @@ function IsArraysEqual(arr1, arr2 ) {
     return false;
   }
 
-  for (var i = 0; i < n; i++)  {
-      if (arr1[i] != arr2[i]) {
-        result = false;
-        break;
+  for (var i = 0; i < n; i++) {
+    if (arr1[i] != arr2[i]) {
+      result = false;
+      break;
     }
   }
-//  return result;
+  //  return result;
 
 }
 //console.log(IsArraysEqual(arr1, arr2));
@@ -375,21 +375,33 @@ function IsArraysEqual(arr1, arr2 ) {
 //     Please do not use built in IndexOf function
 
 var arr1 = [1, 3, 6, 4, 7];
-var arr2 = [1, 3, 6];
+var arr2 = [4,7,6];
 
 function IsArrayIncludesAllElements(arr1, arr2) {
   var m = arr1.length;
   var n = arr2.length;
-  var result = true;
-  for (var i = 0; i < m; i++) {
-  if (arr1[i] != arr2[i]) {
-    result = false;
+  var result = false;
+for (var i = 0; i < n; i++) {
+
+  IndexOf(arr1, arr2);
+  if (IndexOf(arr2[i], arr1) == -1) {
+    return false;
   }
 }
-  return result;
+//  return true;
 }
 
-console.log(IsArrayIncludesAllElements(arr1, arr2));
+//console.log(IsArrayIncludesAllElements(arr1, arr2));
+
+//  9)** Write function which will check does array A includes array B as a sequence
+//     IsArrayIncludes([1, 3, 6, 4, 7], [3, 6, 4]) should return true
+//     IsArrayIncludes([1, 3, 6, 4, 7], [15, 18, 4]) should return false
+//     IsArrayIncludes([1, 3, 6, 4, 7], [6, 3, 1]) should return false
+//     Please do not use built in IndexOf function
+
+var arr1 = [1, 3, 6, 4, 7];
+var arr2 = [3, 6, 4];
+
 
 
 
