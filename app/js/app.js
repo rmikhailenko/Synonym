@@ -403,9 +403,17 @@ var arr1 = [1, 3, 6, 4, 7];
 var arr2 = [3, 6, 4];
 
 function IsArrayIncludes(arr1, arr2) {
-  
+  var m = arr2.length;
+  var result = false;
+  for (var i = 0; i < m; i++) {
+    if (arr2[i] == arr1[i]) {
+      result = true;
+    }
+  }
+  return result;
 }
 
+console.log(IsArrayIncludes(arr1, arr2));
 
 
 
