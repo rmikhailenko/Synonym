@@ -399,21 +399,44 @@ for (var i = 0; i < n; i++) {
 //     IsArrayIncludes([1, 3, 6, 4, 7], [6, 3, 1]) should return false
 //     Please do not use built in IndexOf function
 
-var arr1 = [1, 3, 6, 4, 7];
-var arr2 = [3, 6, 4];
+// var arr1 = [1, 2, -7, 3, -8, 9, 3, 6, 4, 7, 11, 3, 5, 7];
+// var arr2 = [3, 6, 4];
 
-function IsArrayIncludes(arr1, arr2) {
-  var m = arr2.length;
-  var result = false;
-  for (var i = 0; i < m; i++) {
-    if (arr2[i] == arr1[i]) {
-      result = true;
+// function IsArrayIncludes(arr1, arr2) {
+//   var n = arr1.length;
+//   var m = arr2.length;
+//   var result = false;
+//   for (var i = 0; i < m; i++) {
+//     if (arr2[0] == arr1[i]) {
+//       result = i;
+//     }
+//   }
+//
+//   // code below finds the position of first element from second array in the first array
+//
+//   // next code below checks that elements from first array beginning
+//   // from the position of finded element equals element from the second array
+//
+//
+//
+//   return result;
+// }
+//
+// console.log(IsArrayIncludes(arr1, arr2));
+
+var arr1 = [1, 2, -7, 3, -8, 9, 3, 5, 4, 1, -7, 4, 11, 3, 5, 7];
+var arr2 = [3, 5, 4, 1, -7 , 4];
+var result = false
+function test(arr1, arr2) {
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr2[0] == arr1[i]) {
+      result = i;
     }
   }
   return result;
 }
 
-console.log(IsArrayIncludes(arr1, arr2));
+console.log(test(arr1, arr2));
 
 
 
