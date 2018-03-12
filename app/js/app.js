@@ -383,7 +383,6 @@ function IsArrayIncludesAllElements(arr1, arr2) {
   var result = false;
 for (var i = 0; i < n; i++) {
 
-  IndexOf(arr1, arr2);
   if (IndexOf(arr2[i], arr1) == -1) {
     return false;
   }
@@ -425,21 +424,28 @@ for (var i = 0; i < n; i++) {
 // console.log(IsArrayIncludes(arr1, arr2));
 
 var arr1 = [1, 2, -7, 3, -8, 9, 3, 5, 4, 1, -7, 4, 11, 3, 5, 7];
-var arr2 = [3, 5, 4, 1, -7 , 4];
-var result = false
+var arr2 = [5, 4, 1, -7, 4];
+
+function compareArray(arr1, arr2, count) {
+  for (var j = 0; j < arr2.length; j++) {
+    if (arr1[j + count] != arr2[j]) {
+      return false;
+    }
+  }
+  return true;
+}
+
 function test(arr1, arr2) {
   for (var i = 0; i < arr1.length; i++) {
     if (arr2[0] == arr1[i]) {
-      result = i;
+      if (compareArray(arr1, arr2, i)) {
+        return true;
+      }
     }
   }
-  return result;
+  return false;
 }
 
-console.log(test(arr1, arr2));
-
-
-
-
+//console.log(test(arr1, arr2));
 
 //
